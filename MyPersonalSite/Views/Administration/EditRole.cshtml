@@ -1,0 +1,56 @@
+﻿@*
+    for more information on enabling mvc for empty projects, visit https://go.microsoft.com/fwlink/?linkid=397860
+*@
+@*@model editroleviewmodel
+@{
+    viewdata["title"] = "edit role";
+}*@
+@*
+<h1>edit role</h1>
+<form method="post" class="mt-3">
+    <div class="form-group row">
+        <label asp-for="id" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="id" disabled class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="rolename" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="rolename" class="form-control">
+            <span asp-validation-for="rolename" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div asp-validation-summary="all" class="text-danger"></div>
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">update</button>
+            <a asp-action="listroles" class="btn btn-primary">cancel</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>users in this role</h3>
+        </div>
+        <div class="card-body">
+            @if (model.users.any())
+            {
+                foreach (var user in model.users)
+                {
+                    <h5 class="card-title">@user</h5>
+                }
+            }
+            else
+            {
+                <h5 class="card-title">none at the moment</h5>
+            }
+        </div>
+        <div class="card-footer">
+            <a asp-controller="administration" asp-action="editusersinrole" asp-route-roleid="@model.id" class="btn btn-primary" style="width:auto">add or remove users from this role</a>
+            
+        </div>
+    </div>
+</form>*@

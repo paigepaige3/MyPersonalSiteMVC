@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\.vs\Kelly\FileContentIndex\605b5bb3-6285-4c70-af2e-b6a578db38d7.vsidx" />
+    <None Include="wwwroot\.vs\Kelly\FileContentIndex\read.lock" />
+    <None Include="wwwroot\.vs\PersonalSite\config\applicationhost.config" />
+    <None Include="wwwroot\.vs\PersonalSite\FileContentIndex\dea0cfc6-a71c-4628-9a56-d31b3aa38619.vsidx" />
+    <None Include="wwwroot\.vs\PersonalSite\FileContentIndex\read.lock" />
+    <None Include="wwwroot\.vs\PersonalSite\v17\.suo" />
+    <None Include="wwwroot\.vs\slnx.sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\.vs\Kelly\FileContentIndex\merges\" />
+    <Folder Include="wwwroot\.vs\PersonalSite\FileContentIndex\merges\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+    <PackageReference Include="NETCore.MailKit" Version="2.1.0" />
+  </ItemGroup>
+
+</Project>

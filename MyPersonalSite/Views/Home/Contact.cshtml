@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+@model MyPersonalSite.Models.ContactViewModel
+
+<main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>HOWDY! If you feel so inclined to to contact me please fill out my contact form. </p>
+            </div>
+
+            <div>
+                <iframe style="border:0; width: 100%; height: 270px;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4448.3640076730835!2d-94.5335254752573!3d39.006816735721785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e5ca1583a001%3A0xb44f49e90df6aefd!2sKansas%20City%20Zoo!5e0!3m2!1sen!2sus!4v1662063685526!5m2!1sen!2sus"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="row mt-5">
+
+                <div class="col-lg-4">
+                    <div class="info">
+                        <div class="address">
+                            <i class="bi bi-geo-fill"></i>
+                            <h4>Location:</h4>
+                            <p>Overland Park, KS</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="bi bi-envelope-fill"></i>
+                            <h4>Email:</h4>
+                            <p>paigescott3@outlook.com</p>
+                        </div>
+
+                        <a href="https://www.linkedin.com/">
+                            <div class="linkedIn">
+                                <i class="bi bi-linkedin"></i>
+                                <h4>Connect:</h4>
+                                <p>Think Paige</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    <form asp-action="Contact" class="php-email-form">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            @*<label asp-for="Name" class="control-label"></label>*@
+                            <input asp-for="Name" class="form-control" placeholder="Name" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="form-group mt-3">
+                            @*<label asp-for="Email" class="control-label"></label>*@
+                            <input asp-for="Email" class="form-control" placeholder="Email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mt-3">
+                            @*<label asp-for="Subject" class="control-label"></label>*@
+                            <input asp-for="Subject" class="form-control" placeholder="Subject" />
+                            <span asp-validation-for="Subject" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mt-3">
+                            @*<label asp-for="Message" class="control-label"></label>*@
+                            <textarea asp-for="Message" class="form-control" placeholder="Message"></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+                        <div class="my-3">
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+
+                  
+
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+    <!-- ======= API ======= -->
+
+    <article id="weatherApi">
+        <div>
+            <h2>Weather API</h2>
+            <p>Current weather conditions at the Kansas City Zoo:</p>
+            <div id="weatherResults"></div>
+        </div>
+    </article>
+    <script src="~/assets/js/weatherAPI.js"></script>
+
+
+</main><!-- End #main -->
