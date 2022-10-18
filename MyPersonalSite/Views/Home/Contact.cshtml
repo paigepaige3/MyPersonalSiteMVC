@@ -21,8 +21,8 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
+            @*Start of Socials section*@
             <div class="row mt-5">
-
                 <div class="col-lg-4">
                     <div class="info">
                         <div class="address">
@@ -30,13 +30,11 @@
                             <h4>Location:</h4>
                             <p>Overland Park, KS</p>
                         </div>
-
                         <div class="email">
                             <i class="bi bi-envelope-fill"></i>
                             <h4>Email:</h4>
                             <p>paigescott3@outlook.com</p>
                         </div>
-
                         <a href="https://www.linkedin.com/">
                             <div class="linkedIn">
                                 <i class="bi bi-linkedin"></i>
@@ -44,10 +42,9 @@
                                 <p>Think Paige</p>
                             </div>
                         </a>
-
                     </div>
-
                 </div>
+                @*END of Socials section*@
 
                 <div class="col-lg-8 mt-5 mt-lg-0">
                     <form asp-action="Contact" class="php-email-form">
@@ -57,8 +54,6 @@
                             <input asp-for="Name" class="form-control" placeholder="Name" />
                             <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
-
-
                         <div class="form-group mt-3">
                             @*<label asp-for="Email" class="control-label"></label>*@
                             <input asp-for="Email" class="form-control" placeholder="Email" />
@@ -79,13 +74,8 @@
                         </div>
                         <div class="text-center"><button type="submit">Send Message</button></div>
                     </form>
-
-                  
-
                 </div>
-
             </div>
-
         </div>
     </section><!-- End Contact Section -->
     <!-- ======= API ======= -->

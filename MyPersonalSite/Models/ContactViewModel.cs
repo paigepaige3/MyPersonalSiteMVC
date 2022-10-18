@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
+using MyPersonalSite.Models;
 namespace MyPersonalSite.Models
 {
     public class ContactViewModel
